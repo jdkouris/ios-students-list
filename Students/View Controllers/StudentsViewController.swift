@@ -11,11 +11,18 @@ import UIKit
 class StudentsViewController: UIViewController {
     
     // MARK: - IBOutlets
+    
     @IBOutlet weak var sortSelector: UISegmentedControl!
     @IBOutlet weak var filterSelector: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
+    
+    private let studentController = StudentController()
+    
+    private var students = [Student]()
+    
+    // MARK: - View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +32,11 @@ class StudentsViewController: UIViewController {
     // MARK: - Action Handlers
     
     @IBAction func sort(_ sender: UISegmentedControl) {
+        
     }
     
     @IBAction func filter(_ sender: UISegmentedControl) {
+        
     }
     
     // MARK: - Private
