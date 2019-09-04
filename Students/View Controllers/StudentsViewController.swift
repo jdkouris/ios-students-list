@@ -81,7 +81,9 @@ class StudentsViewController: UIViewController {
         if sortSelector.selectedSegmentIndex == 0 { // first name sort
             updatedStudents = updatedStudents.sorted { $0.firstName < $1.firstName }
         } else if sortSelector.selectedSegmentIndex == 1 { // last name sort
-            updatedStudents = updatedStudents.sorted { $0.lastName < $1.lastName }
+            updatedStudents = updatedStudents.sorted(by: { (lhs, rhs) -> Bool in // lhs = left hand side, rhs = right hand side
+                return lhs.lastName < rhs.lastName
+            })
         }
         
         filteredAndSortedStudents = updatedStudents
