@@ -35,6 +35,9 @@
                                                     <segment title="First Name"/>
                                                     <segment title="Last Name"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="sort:" destination="jLg-qK-yuu" eventType="valueChanged" id="pCv-6Z-DKv"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -55,6 +58,9 @@
                                                     <segment title="Web"/>
                                                     <segment title="UX"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="filter:" destination="jLg-qK-yuu" eventType="valueChanged" id="XRv-SQ-qep"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -89,6 +95,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jLg-qK-yuu" id="YF6-IP-kdl"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,6 +112,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JrM-hJ-cXy"/>
                     </view>
+                    <connections>
+                        <outlet property="filterSelector" destination="WsJ-CV-Xpj" id="Lm9-3V-cpf"/>
+                        <outlet property="sortSelector" destination="6yV-9f-bDy" id="6Gr-UQ-6m7"/>
+                        <outlet property="tableView" destination="UNg-pS-pkX" id="T3d-p2-Wa4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wfv-VO-aeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
